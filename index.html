@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="mobile-dropdown">
+      <div class="mobile-card">
+        <div class="mobile-card-image-box">
+          <div class="dropdown-image-box">
+            <img src="./image/image.png" alt="" />
+            <div class="dropdown-card-box">
+              <div class="dropdown-card-box-top">
+                <h1>What</h1>
+                <p>
+                  S30 is for everyone, whether you're an advanced trainer or a
+                  beginner...
+                </p>
+              </div>
+              <div class="icon-box">
+                <span class="Plus">+</span>
+                <span class="minus">-</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-card-text-box">
+          <div>
+            <h1>What is s30</h1>
+            <p>
+              S30 is for everyone, whether you're an advanced trainer or a
+              beginner, with scalable workouts to fit your needs in a
+              fully-immersive environment. <br />
+              <br />Our 45-minute classes feature lowlights, loud bass, and high
+              BPM music with weights for strength and muscle building,
+              conditioning for fitness and endurance and hybrid sessions for
+              overall strength and cardiovascular improvement, all tailored by
+              experienced trainers to make you feel the best version of
+              yourself.
+            </p>
+          </div>
+          <button class="try-btn">try us today</button>
+        </div>
+      </div>
+      <div class="mobile-card">
+        <div class="mobile-card-image-box">
+          <div class="dropdown-image-box">
+            <img src="./image/image.png" alt="" />
+            <div class="dropdown-card-box">
+              <div class="dropdown-card-box-top">
+                <h1>What</h1>
+                <p>
+                  S30 is for everyone, whether you're an advanced trainer or a
+                  beginner...
+                </p>
+              </div>
+              <div class="icon-box">
+                <span class="Plus">+</span>
+                <span class="minus">-</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-card-text-box">
+          <div>
+            <h1>What is s30</h1>
+            <p>
+              S30 is for everyone, whether you're an advanced trainer or a
+              beginner, with scalable workouts to fit your needs in a
+              fully-immersive environment. <br />
+              <br />Our 45-minute classes feature lowlights, loud bass, and high
+              BPM music with weights for strength and muscle building,
+              conditioning for fitness and endurance and hybrid sessions for
+              overall strength and cardiovascular improvement, all tailored by
+              experienced trainers to make you feel the best version of
+              yourself.
+            </p>
+          </div>
+          <button>try us today</button>
+        </div>
+      </div>
+      <div class="mobile-card">
+        <div class="mobile-card-image-box">
+          <div class="dropdown-image-box">
+            <img src="./image/image.png" alt="" />
+            <div class="dropdown-card-box">
+              <div class="dropdown-card-box-top">
+                <h1>What</h1>
+                <p>
+                  S30 is for everyone, whether you're an advanced trainer or a
+                  beginner...
+                </p>
+              </div>
+              <div class="icon-box">
+                <span class="Plus">+</span>
+                <span class="minus">-</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-card-text-box">
+          <div>
+            <h1>What is s30</h1>
+            <p>
+              S30 is for everyone, whether you're an advanced trainer or a
+              beginner, with scalable workouts to fit your needs in a
+              fully-immersive environment. <br />
+              <br />Our 45-minute classes feature lowlights, loud bass, and high
+              BPM music with weights for strength and muscle building,
+              conditioning for fitness and endurance and hybrid sessions for
+              overall strength and cardiovascular improvement, all tailored by
+              experienced trainers to make you feel the best version of
+              yourself.
+            </p>
+          </div>
+          <button>try us today</button>
+        </div>
+      </div>
+      <div class="mobile-card">
+        <div class="mobile-card-image-box">
+          <div class="dropdown-image-box">
+            <img src="./image/image.png" alt="" />
+            <div class="dropdown-card-box">
+              <div class="dropdown-card-box-top">
+                <h1>What</h1>
+                <p>
+                  S30 is for everyone, whether you're an advanced trainer or a
+                  beginner...
+                </p>
+              </div>
+              <div class="icon-box">
+                <span class="Plus">+</span>
+                <span class="minus">-</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mobile-card-text-box">
+          <div>
+            <h1>What is s30</h1>
+            <p>
+              S30 is for everyone, whether you're an advanced trainer or a
+              beginner, with scalable workouts to fit your needs in a
+              fully-immersive environment. <br />
+              <br />Our 45-minute classes feature lowlights, loud bass, and high
+              BPM music with weights for strength and muscle building,
+              conditioning for fitness and endurance and hybrid sessions for
+              overall strength and cardiovascular improvement, all tailored by
+              experienced trainers to make you feel the best version of
+              yourself.
+            </p>
+          </div>
+          <button>try us today</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.querySelectorAll(".mobile-card").forEach((card) => {
+        const iconBox = card.querySelector(".icon-box");
+    
+        iconBox.addEventListener("click", () => {
+          // Collapse all other cards
+          document.querySelectorAll(".mobile-card").forEach((c) => {
+            if (c !== card) {
+              c.classList.remove("expanded");
+              c.style.maxHeight = "220px";
+            }
+          });
+    
+          // Toggle this card
+          const isExpanded = card.classList.contains("expanded");
+          if (isExpanded) {
+            card.classList.remove("expanded");
+            card.style.maxHeight = "220px";
+          } else {
+            card.classList.add("expanded");
+            const contentHeight = card.scrollHeight;
+            card.style.maxHeight = contentHeight + "px";
+          }
+        });
+      });
+    </script>
+    
+  </body>
+</html>

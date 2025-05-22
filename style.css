@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.mobile-dropdown {
+    display: none;
+}
+
+body {
+    background-color: black;
+}
+
+@media screen and (min-width: 0px) and (max-width:767px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .mobile-dropdown {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        padding: 10px 40px;
+    }
+
+    .mobile-card {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        height: 220px;
+        border-radius: 20px;
+        overflow: hidden;
+        transition: height 0.5s ease-in-out;
+    }
+
+    .mobile-card.expanded {
+        height: 100%;
+        overflow: visible;
+        max-height: 1000px !important;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .dropdown-card-box .dropdown-card-box-top,
+    .dropdown-card-box>div:first-child {
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .mobile-card.expanded .dropdown-card-box .dropdown-card-box-top,
+    .mobile-card.expanded .dropdown-card-box>div:first-child {
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .mobile-card-image-box {
+        width: 100%;
+        height: 100%;
+    }
+
+    .dropdown-image-box {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .dropdown-card-box {
+        position: absolute;
+        top: 0;
+        left: 0px;
+        width: 100%;
+        height: calc(100%);
+        background-color: rgba(0, 0, 0, 0.473);
+        padding: 40px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 20px;
+    }
+
+    .mobile-card.expanded .dropdown-card-box {
+        height: calc(100% - 5px);
+    }
+
+    .dropdown-card-box .icon-box {
+        font-size: 48px;
+        font-weight: 700;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 40px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .icon-box .minus {
+        display: none;
+    }
+
+    .dropdown-image-box img {
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    .mobile-card-text-box {
+        background-image: url(./image/card-bg.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 40px;
+        width: 100%;
+        height: 100%;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 30px;
+        border-radius: 20px;
+        max-height: 100%;
+        min-height: 100%;
+
+    }
+
+    .mobile-card-text-box p {
+        padding-top: 10px;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .dropdown-card-box-top {
+        font-family: "Poppins", sans-serif;
+    }
+
+    .icon-box {
+        cursor: pointer;
+    }
+
+    .icon-box .Plus {
+        display: inline;
+    }
+
+    .icon-box .minus {
+        display: none;
+    }
+
+    .mobile-card.expanded .icon-box .Plus {
+        display: none;
+    }
+
+    .mobile-card.expanded .icon-box .minus {
+        display: inline;
+    }
+
+    .mobile-card.expanded .dropdown-card-box .icon-box {
+        top: 0;
+        bottom: auto;
+    }
+
+    .dropdown-card-box-top h1,
+    .mobile-card-text-box h1 {
+        font-family: "Bebas Neue", sans-serif;
+    }
+
+    .try-btn {
+        background-color: #fcdc08;
+        outline: none;
+        border: none;
+        font-size: 25px;
+        font-family: "Bebas Neue", sans-serif;
+        padding: 10px 25px;
+        border-radius: 20px;
+
+    }
+}
