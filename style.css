@@ -1,11 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 .mobile-dropdown {
     display: none;
-}
-
-body {
-    background-color: black;
 }
 
 @media screen and (min-width: 0px) and (max-width:767px) {
@@ -29,15 +25,15 @@ body {
         gap: 20px;
         width: 100%;
         height: 220px;
-        border-radius: 20px;
         overflow: hidden;
         transition: height 0.5s ease-in-out;
     }
 
     .mobile-card.expanded {
         height: 100%;
+        min-height: 100%;
         overflow: visible;
-        max-height: 1000px !important;
+        max-height: 100% !important;
         transition: all 0.3s ease-in-out;
     }
 
@@ -59,8 +55,26 @@ body {
 
     .dropdown-image-box {
         width: 100%;
-        height: 100%;
+        height: 220px;
         position: relative;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .mobile-card.expanded .dropdown-image-box {
+        height: 100%;
+        height: 100%;
+        border-radius: 0;
+        overflow: visible;
+    }
+
+    .dropdown-image-box img {
+        object-position: top;
+    }
+
+    .mobile-card.expanded .dropdown-image-box img {
+        border-radius: 20px;
+        overflow: hidden;
     }
 
     .dropdown-card-box {
@@ -68,8 +82,8 @@ body {
         top: 0;
         left: 0px;
         width: 100%;
-        height: calc(100%);
-        background-color: rgba(0, 0, 0, 0.473);
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.541);
         padding: 40px;
         color: white;
         display: flex;
@@ -80,13 +94,14 @@ body {
 
     .mobile-card.expanded .dropdown-card-box {
         height: calc(100% - 5px);
+        background-color: rgba(0, 0, 0, 0.0);
     }
 
     .dropdown-card-box .icon-box {
         font-size: 48px;
         font-weight: 700;
         position: absolute;
-        bottom: 0;
+        bottom: -30px;
         right: 0;
         padding: 40px;
         transition: all 0.3s ease-in-out;
@@ -98,11 +113,12 @@ body {
 
     .dropdown-image-box img {
         width: 100%;
-        border-radius: 20px;
+        height: 100%;
+        object-fit: cover;
     }
 
     .mobile-card-text-box {
-        background-image: url(./image/card-bg.png);
+        background-image: url(https://assets.cdn.filesafe.space/2vfrVb4pEskFSCK7viXv/media/6835614790c58761ac965a88.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -117,13 +133,36 @@ body {
         gap: 30px;
         border-radius: 20px;
         max-height: 100%;
-        min-height: 100%;
+    }
 
+    .mobile-card-text-box h1 {
+        color: #FF0080;
     }
 
     .mobile-card-text-box p {
         padding-top: 10px;
         font-family: "Poppins", sans-serif;
+    }
+
+    .mobile-card-text-box h3 {
+        padding-top: 20px;
+        color: #D6FF00;
+        font-family: "Poppins", sans-serif;
+    }
+
+    .mobile-card-text-box ul li {
+        font-family: "Poppins", sans-serif;
+        padding-top: 10px;
+        list-style: none;
+    }
+
+    .mobile-card-text-box ul li b {
+        padding-left: 5px;
+    }
+
+    .mobile-card-text-box ul li i {
+
+        color: #D6FF00;
     }
 
     .dropdown-card-box-top {
@@ -157,17 +196,23 @@ body {
 
     .dropdown-card-box-top h1,
     .mobile-card-text-box h1 {
-        font-family: "Bebas Neue", sans-serif;
+        font-family: "Barlow", sans-serif;
+        padding-bottom: 20px;
     }
 
     .try-btn {
-        background-color: #fcdc08;
+        background-color: #D6FF00;
         outline: none;
         border: none;
-        font-size: 25px;
-        font-family: "Bebas Neue", sans-serif;
-        padding: 10px 25px;
-        border-radius: 20px;
+        font-family: "Barlow", sans-serif;
+        padding: 10px 35px;
+        border-radius: 150px;
+        display: flex;
+        flex-direction: column;
+    }
 
+    .try-btn .btn-heading {
+        font-size: 32px;
+        font-family: "Poppins", sans-serif;
     }
 }
